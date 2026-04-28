@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eva Battolla — Focuswater</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+
+  <header class="navbar" data-header>
+    <nav class="nav-left">
+      <a href="#">Shop</a>
+      <a href="#">News</a>
+    </nav>
+
+    <a class="logo" href="#top">FOCUS<br><span>WATER</span></a>
+
+    <nav class="nav-right">
+      <a href="#">We care</a>
+      <a href="#">About us</a>
+      <button class="icon-btn" aria-label="Recherche"></button>
+      <button class="icon-btn user" aria-label="Compte"></button>
+      <button class="icon-btn cart" aria-label="Panier"></button>
+    </nav>
+
+    <button class="burger" data-burger aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="mobile-menu" data-mobile-menu>
+      <a href="#">Shop</a>
+      <a href="#">News</a>
+      <a href="#">We care</a>
+      <a href="#">About us</a>
+      <a href="#film">Voir le film</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.svg">
+        <source src="assets/hero-loop.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content reveal">
+        <h1>Eva Battolla</h1>
+        <p>Pro freerider</p>
+      </div>
+
+      <a class="hero-cta" href="#film">Regarde le film complet</a>
+    </section>
+
+    <section class="intro-section">
+      <div class="parallax-wrap">
+        <img class="float-img img-1" data-parallax="0.10" src="assets/eva-portrait.svg" alt="Portrait Eva" />
+        <img class="float-img img-2" data-parallax="-0.08" src="assets/ski-action.svg" alt="Eva en ski" />
+        <img class="float-img img-3" data-parallax="0.14" src="assets/video-still.svg" alt="Still vidéo" />
+        <img class="float-img img-4" data-parallax="-0.12" src="assets/bike.svg" alt="Eva à vélo" />
+        <img class="float-img img-5" data-parallax="0.08" src="assets/window.svg" alt="Image lifestyle" />
+        <img class="float-img img-6" data-parallax="-0.15" src="assets/snow.svg" alt="Image montagne" />
+
+        <div class="intro-text reveal">
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+          <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline-section" data-horizontal-section>
+      <div class="timeline-sticky">
+        <div class="timeline-track" data-horizontal-track>
+          <div class="timeline-card top">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          </div>
+
+          <div class="date-point">
+            <span>2001</span>
+          </div>
+
+          <div class="timeline-card bottom">
+            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+          </div>
+
+          <div class="date-point">
+            <span>2010</span>
+          </div>
+
+          <div class="timeline-card top">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          </div>
+
+          <div class="date-point">
+            <span>2019</span>
+          </div>
+
+          <div class="timeline-card bottom">
+            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+          </div>
+
+          <div class="date-point">
+            <span>2024</span>
+          </div>
+
+          <div class="timeline-card top">
+            <p>Une saison qui continue d’évoluer entre freeride, entraînement, vélo et projets d’image.</p>
+          </div>
+
+          <svg class="timeline-line" viewBox="0 0 1800 360" preserveAspectRatio="none">
+            <path d="M0,170 C180,30 320,320 500,180 C700,20 820,280 1030,170 C1240,60 1330,300 1510,180 C1650,70 1740,90 1800,160" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section reveal">
+      <h2>“Il faut être persévérant malgré les doutes.”</h2>
+      <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+    </section>
+
+    <section class="marquee-section">
+      <div class="photo-marquee">
+        <div class="marquee-track">
+          <img src="assets/snow.svg" alt="">
+          <img src="assets/lifestyle.svg" alt="">
+          <img src="assets/detail.svg" alt="">
+          <img src="assets/car.svg" alt="">
+          <img src="assets/lifestyle.svg" alt="">
+          <img src="assets/snow.svg" alt="">
+          <img src="assets/lifestyle.svg" alt="">
+          <img src="assets/detail.svg" alt="">
+          <img src="assets/car.svg" alt="">
+          <img src="assets/lifestyle.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="film-section" id="film">
+      <a class="film-preview reveal" href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+        <img src="assets/film-cover.svg" alt="Miniature du film">
+        <span class="play">▶</span>
+        <small>13:55</small>
+      </a>
+
+      <div class="film-text reveal">
+        <h2>Eva Battolla : le film</h2>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+      </div>
+    </section>
+
+    <section class="athletes-section">
+      <div class="section-title reveal">
+        <h2>Autres athlètes</h2>
+        <a href="#" class="outline-btn">Autres athlètes</a>
+      </div>
+
+      <div class="athletes-grid">
+        <article class="athlete-card reveal">
+          <img src="assets/athlete-1.svg" alt="">
+          <p>Pro snowboarder</p>
+          <h3>Nicolas Huber</h3>
+        </article>
+        <article class="athlete-card reveal">
+          <img src="assets/athlete-2.svg" alt="">
+          <p>Pro athlétisme</p>
+          <h3>Annik Kälin</h3>
+        </article>
+        <article class="athlete-card reveal">
+          <img src="assets/athlete-3.svg" alt="">
+          <p>Pro ski racer</p>
+          <h3>Ryan Regez</h3>
+        </article>
+        <article class="athlete-card reveal">
+          <img src="assets/athlete-4.svg" alt="">
+          <p>Pro freeskiier</p>
+          <h3>Colin Wili</h3>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <a class="footer-logo" href="#top">FOCUS<br><span>WATER</span></a>
+    </div>
+
+    <div class="newsletter">
+      <h4>Rejoins la communauté</h4>
+      <input type="email" placeholder="Ton adresse e-mail">
+      <p>En t’inscrivant, tu acceptes de recevoir les nouvelles FOCUSWATER.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#">Expédition et retour</a>
+      <a href="#">Mein Konto</a>
+      <a href="#">Panier</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Information</h4>
+      <a href="#">FAQ</a>
+      <a href="#">CG</a>
+      <a href="#">Protection des données</a>
+      <a href="#">Cookies</a>
+      <a href="#">Mentions légales</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>À propos de nous</h4>
+      <a href="#">Athlètes</a>
+      <a href="#">Sponsoring d’événements</a>
+      <a href="#">Contact</a>
+      <a href="#">Jobs</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Rivella AG</p>
+      <div class="footer-dots">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
