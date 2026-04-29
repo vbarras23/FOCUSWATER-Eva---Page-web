@@ -1,4 +1,3 @@
-/* FIGTREE (variable) */
 @font-face {
   font-family: 'Figtree';
   src: url('fonts/Figtree-VariableFont_wght.woff2') format('woff2');
@@ -6,7 +5,6 @@
   font-display: swap;
 }
 
-/* ITC Avant Garde */
 @font-face {
   font-family: 'ITC';
   src: url('fonts/ITCAvantGardeStd-Demi.woff2') format('woff2');
@@ -267,8 +265,8 @@ input {
 .img-6 { width: 185px; right: 21%; bottom: 0; }
 
 .timeline-section {
-  height: 310vh;
-  background: var(--blue);
+  height: 360vh;
+  background: #00a5ff;
 }
 
 .timeline-sticky {
@@ -276,73 +274,75 @@ input {
   top: 0;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
 }
 
 .timeline-track {
   position: relative;
-  width: 1800px;
-  min-width: 1800px;
-  height: 520px;
-  padding: 0 80px;
-  will-change: transform;
+  width: 3250px;
+  height: 100vh;
 }
 
 .timeline-line {
   position: absolute;
+  top: 50%;
   left: 0;
-  top: 80px;
-  width: 1800px;
-  height: 360px;
-  z-index: 1;
-  pointer-events: none;
+  width: 3250px;
+  height: 500px;
+  transform: translateY(-50%);
+  overflow: visible;
 }
 
 .timeline-line path {
   fill: none;
   stroke: white;
-  stroke-width: 5;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.timeline-event {
+  position: absolute;
+  left: var(--x);
+  top: calc(50% - 250px + var(--y));
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .date-point {
-  position: absolute;
-  z-index: 3;
-  width: 78px;
-  height: 78px;
+  position: relative;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
   background: white;
-  display: grid;
-  place-items: center;
-  color: var(--blue);
-  font-weight: 900;
-  font-size: 13px;
+  color: #00a5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 24px;
+  box-shadow: 0 14px 30px rgba(0, 71, 255, 0.18);
 }
-
-.date-point:nth-of-type(2) { left: 250px; top: 295px; }
-.date-point:nth-of-type(4) { left: 585px; top: 142px; }
-.date-point:nth-of-type(6) { left: 1060px; top: 290px; }
-.date-point:nth-of-type(8) { left: 1455px; top: 165px; }
 
 .timeline-card {
   position: absolute;
-  z-index: 4;
-  width: 300px;
+  width: 260px;
   color: white;
-  font-size: 14px;
-  line-height: 1.25;
-  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.4;
 }
 
-.timeline-card p {
-  margin: 0;
+.timeline-event.top .timeline-card {
+  top: 86px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.timeline-card:nth-of-type(1) { left: 70px; top: 60px; }
-.timeline-card:nth-of-type(3) { left: 420px; top: 365px; }
-.timeline-card:nth-of-type(5) { left: 860px; top: 70px; }
-.timeline-card:nth-of-type(7) { left: 1265px; top: 350px; }
-.timeline-card:nth-of-type(9) { left: 1580px; top: 65px; }
+.timeline-event.bottom .timeline-card {
+  bottom: 86px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 .quote-section {
   padding: 80px 7vw 95px;
