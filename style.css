@@ -66,7 +66,7 @@ input {
 }
 
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   z-index: 50;
@@ -680,6 +680,29 @@ input {
     padding: 70px 24px;
   }
 
+  .quote-title {
+    overflow: hidden;
+  }
+
+  .quote-section h2 {
+  max-width: 930px;
+  margin: 0 auto 26px;
+  font-size: clamp(44px, 7vw, 88px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+
+  .quote-title span {
+    display: block;
+    opacity: 0;
+    transform: translateY(115%);
+    transition:
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.7s ease;
+}
+
+
   .film-section {
     grid-template-columns: 1fr;
     gap: 42px;
@@ -745,3 +768,45 @@ input {
     height: 130px;
   }
 }
+
+
+
+.quote-section .quote-title {
+  max-width: 930px;
+  margin: 0 auto 26px;
+  font-family: 'ITC', sans-serif;
+  font-size: clamp(44px, 7vw, 88px);
+  line-height: 0.95;
+  letter-spacing: 0;
+  font-weight: 600;
+  overflow: visible;
+}
+
+.quote-section .quote-title span {
+    overflow: hidden;
+  display: block;
+  opacity: 0;
+  transform: translateY(115%);
+  transition:
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.7s ease;
+}
+
+.quote-section.is-visible .quote-title span {
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-section.is-visible .quote-title span:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.quote-section.is-visible .quote-title span:nth-child(2) {
+  transition-delay: 0.16s;
+}
+
+.quote-section.is-visible .quote-title span:nth-child(3) {
+  transition-delay: 0.27s;
+}
+
