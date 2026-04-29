@@ -163,7 +163,7 @@ input {
   min-height: 100vh;
   overflow: hidden;
   background: #ccc;
-}
+} 
 
 .hero-video,
 .hero > img {
@@ -172,9 +172,7 @@ input {
   object-fit: cover;
 }
 
-.hero-video {
-  background: url("assets/hero-poster.svg") center / cover;
-}
+
 
 .hero-overlay {
   position: absolute;
@@ -451,9 +449,9 @@ input {
 }
 
 .athletes-section {
-  margin: 0 7vw 100px;
-  padding: 95px 4vw;
   background: white;
+  margin: 0 0 100px;
+  padding: 95px 7vw;
 }
 
 .section-title {
@@ -469,8 +467,8 @@ input {
   border: 2px solid var(--blue);
   border-radius: 999px;
   color: var(--blue);
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .athletes-grid {
@@ -488,33 +486,37 @@ input {
 
 .athlete-card img {
   width: 100%;
-  aspect-ratio: 1.25 / 1;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
 .athlete-card p {
   margin: 12px 14px 2px;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .athlete-card h3 {
   margin: 0 14px 18px;
-  font-size: 17px;
+  font-size: 24px;
 }
 
 .footer {
   display: grid;
-  grid-template-columns: 0.8fr 1.4fr repeat(3, 1fr);
-  gap: 55px;
-  padding: 90px 7vw 35px;
+  grid-template-columns: 90px 1.4fr repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px 6% 35px;
   background: var(--light);
 }
 
 .footer-logo {
-  background: var(--blue);
-  color: white;
+  width: 60px;
+  height: 60px;
+  justify-self: center;
+  border-radius: 50%;
+  background: transparent;
 }
+
 
 .footer h4 {
   margin: 0 0 18px;
@@ -534,7 +536,7 @@ input {
   max-width: 310px;
   padding: 16px 18px;
   border: 0;
-  border-radius: 3px;
+  border-radius: 12px;
   background: white;
   margin-bottom: 18px;
 }
@@ -555,7 +557,7 @@ input {
 }
 
 .footer-dots span {
-  width: 34px;
+  width: 34px;  
   height: 34px;
   border-radius: 50%;
   background: white;
@@ -653,21 +655,26 @@ input {
     vertical-align: top;
   }
 
-  .timeline-section {
-    height: auto;
-    padding: 80px 24px;
-  }
+.timeline-section {
+  height: auto;
+  padding: 80px 0;
+  overflow: hidden;
+}
 
-  .timeline-sticky {
-    position: relative;
-    height: auto;
-    overflow-x: auto;
-  }
+.timeline-sticky {
+  position: relative;
+  height: auto;
+  overflow-x: auto;
+  padding: 0 24px;
+}
 
-  .timeline-track {
-    transform: none !important;
-    height: 430px;
-  }
+.timeline-track {
+  transform: none !important;
+  width: 3250px;
+  min-width: 3250px;
+  height: 520px;
+}
+
 
   .quote-section {
     padding: 70px 24px;
@@ -721,12 +728,12 @@ input {
   }
 
   .timeline-track {
-    min-width: 1350px;
-    width: 1350px;
+   min-width: 3250px;
+  width: 3250px;
   }
 
   .timeline-line {
-    width: 1350px;
+    width: 3250px;
   }
 
   .athletes-grid {

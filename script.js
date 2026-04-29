@@ -29,12 +29,18 @@ const horizontalTrack = document.querySelector("[data-horizontal-track]");
 function handleScroll() {
   const scrollY = window.scrollY;
 
-  parallaxImages.forEach((image) => {
-    const speed = Number(image.dataset.parallax);
-    const rect = image.getBoundingClientRect();
-    const offset = (window.innerHeight - rect.top) * speed;
-    image.style.transform = `translateY(${offset}px)`;
-  });
+parallaxImages.forEach((image) => {
+  if (window.innerWidth <= 900) {
+    image.style.transform = "none";
+    return;
+  }
+
+  const speed = Number(image.dataset.parallax);
+  const rect = image.getBoundingClientRect();
+  const rawOffset = (window.innerHeight - rect.top) * speed;
+  const offset = Math.max(Math.min(rawOffset, 50), -50);
+  image.style.transform = `translateY(${offset}px)`;
+});
 
   if (horizontalSection && horizontalTrack && window.innerWidth > 900) {
     const sectionTop = horizontalSection.offsetTop;
