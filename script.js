@@ -1,3 +1,7 @@
+window.addEventListener("load", () => {
+  document.body.classList.add("is-loaded");
+});
+
 const burger = document.querySelector("[data-burger]");
 const mobileMenu = document.querySelector("[data-mobile-menu]");
 

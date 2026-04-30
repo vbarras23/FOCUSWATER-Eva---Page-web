@@ -195,6 +195,9 @@ input {
   font-size: clamp(54px, 7vw, 100px);
   line-height: 0.88;
   color: var(--blue);
+  font-family: "tt-disruptors", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .hero p {
@@ -868,4 +871,85 @@ input {
   transition-delay: 0.27s;
 }
 
+@media (max-width: 900px) {
+  .navbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    height: 110px;
+    display: block;
+    padding: 0;
+  }
 
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 24px;
+    transform: translateX(-50%);
+    width: 72px;
+    height: 72px;
+  }
+
+  .header-right {
+    position: absolute;
+    right: 28px;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .burger {
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    z-index: 60;
+    color: white;
+  }
+
+  .burger span {
+    display: block;
+    width: 34px;
+    height: 2px;
+    margin: 0;
+    background: currentColor;
+  }
+
+  .burger span:nth-child(3) {
+    display: none;
+  }
+
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0;
+    width: max-content;
+  }
+
+  .nav-icons img {
+    display: block;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    object-fit: contain;
+  }
+}
