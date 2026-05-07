@@ -226,7 +226,7 @@ input {
 }
 
 .intro-section {
-  padding: 92px 7vw 100px;
+  padding:80px 7vw 80px;
   background: white;
 }
 
@@ -235,8 +235,9 @@ input {
   min-height: 650px;
   max-width: 1160px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
 }
+
 
 .intro-text {
   position: relative;
@@ -270,8 +271,8 @@ input {
 .img-6 { width: 185px; right: 21%; bottom: 0; }
 
 .timeline-section {
-  height: 340vh;
-  padding-bottom: 80px;
+  height: 300vh;
+  padding-bottom: 40px;
   background: #00a5ff;
 }
 
@@ -890,8 +891,8 @@ input {
   .logo {
     position: absolute;
     left: 50%;
-    top: 24px;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 72px;
     height: 72px;
   }
@@ -899,7 +900,8 @@ input {
   .header-right {
     position: absolute;
     right: 28px;
-    top: 50px;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     gap: 14px;
