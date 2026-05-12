@@ -4,11 +4,18 @@ window.addEventListener("load", () => {
 
 const burger = document.querySelector("[data-burger]");
 const mobileMenu = document.querySelector("[data-mobile-menu]");
+const mobileClose = document.querySelector("[data-mobile-close]");
 
 if (burger && mobileMenu) {
   burger.addEventListener("click", () => {
     mobileMenu.classList.toggle("is-open");
   });
+
+  if (mobileClose) {
+    mobileClose.addEventListener("click", () => {
+      mobileMenu.classList.remove("is-open");
+    });
+  }
 
   mobileMenu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => mobileMenu.classList.remove("is-open"));
