@@ -171,6 +171,7 @@ input {
   min-height: 100vh;
   overflow: hidden;
   background: #ccc;
+  isolation: isolate;
 } 
 
 .hero-video,
@@ -186,6 +187,8 @@ input {
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg, rgba(0,0,0,0.34), rgba(0,0,0,0.02));
+  z-index: 2;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -193,16 +196,30 @@ input {
   left: 7vw;
   bottom: 31vh;
   color: white;
+  z-index: 3;
 }
 
 .hero h1 {
   margin: 0 0 8px;
   font-size: clamp(54px, 7vw, 100px);
   line-height: 0.88;
-  color: var(--blue);
-  font-family: "tt-disruptors", sans-serif;
-  font-weight: 400;
+  font-family: 'ITC', sans-serif;
+  font-weight: 600;
   font-style: normal;
+  color: white;
+  -webkit-text-fill-color: white;
+  mix-blend-mode: difference;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+@supports not (mix-blend-mode: difference) {
+  .hero h1 {
+    color: var(--blue);
+    -webkit-text-fill-color: initial;
+    mix-blend-mode: normal;
+  }
+
 }
 
 .hero p {
@@ -222,6 +239,7 @@ input {
   color: white;
   font-size: 18px;
   font-weight: 400;
+  z-index: 4;
   transition: transform 0.25s ease, background 0.25s ease;
 }
 
