@@ -922,6 +922,12 @@ input {
     margin: 0 0 14px;
   }
 
+  .img-4,
+  .img-5,
+  .img-6 {
+    display: none;
+  }
+
   .timeline-track {
    min-width: 3250px;
   width: 3250px;
