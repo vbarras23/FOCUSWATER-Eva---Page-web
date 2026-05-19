@@ -200,17 +200,27 @@ input {
 }
 
 .hero h1 {
+  position: relative;
+  display: inline-block;
   margin: 0 0 8px;
   font-size: clamp(54px, 7vw, 100px);
   line-height: 0.88;
   font-family: 'ITC', sans-serif;
   font-weight: 600;
   font-style: normal;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero h1::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
   color: white;
   -webkit-text-fill-color: white;
   mix-blend-mode: difference;
-
-  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
 }
 
 @supports not (mix-blend-mode: difference) {
@@ -218,6 +228,10 @@ input {
     color: var(--blue);
     -webkit-text-fill-color: initial;
     mix-blend-mode: normal;
+  }
+
+  .hero h1::before {
+    content: none;
   }
 
 }
