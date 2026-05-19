@@ -186,7 +186,7 @@ input {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.34), rgba(0,0,0,0.02));
+  background: transparent;
   z-index: 2;
   pointer-events: none;
 }
@@ -200,28 +200,19 @@ input {
 }
 
 .hero h1 {
-  position: relative;
-  display: inline-block;
   margin: 0 0 8px;
   font-size: clamp(54px, 7vw, 100px);
   line-height: 0.88;
   font-family: 'ITC', sans-serif;
   font-weight: 600;
   font-style: normal;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  -webkit-font-smoothing: antialiased;
-}
-
-.hero h1::before {
-  content: attr(data-text);
-  position: absolute;
-  inset: 0;
   color: white;
   -webkit-text-fill-color: white;
   mix-blend-mode: difference;
-  pointer-events: none;
+  -webkit-font-smoothing: antialiased;
 }
+
+
 
 @supports not (mix-blend-mode: difference) {
   .hero h1 {
